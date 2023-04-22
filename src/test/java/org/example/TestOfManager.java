@@ -52,8 +52,8 @@ public class TestOfManager {
         manager.addFilmsManager(name5);
 
 
-        String[] expected = {name5, name4, name3};
-        String[] actual = manager.setManagerFilms(3);
+        String[] expected = {name5, name4};
+        String[] actual = manager.setManagerFilms(2);
         Assertions.assertArrayEquals(expected, actual);
     }
 
