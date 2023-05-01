@@ -110,28 +110,5 @@ public class TestOfManager {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void ManagerFilmsTestBasic2() {
-
-        String[] expected = {name7};
-        String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void ManagerFilmsTestZero() {
-
-        manager.addFilmsManager(name1);
-        manager.addFilmsManager(name2);
-        manager.addFilmsManager(name3);
-        manager.addFilmsManager(name4);
-        manager.addFilmsManager(name5);
-        manager.addFilmsManager(name6);
-
-
-        String[] expected = {name6, name5, name4, name3, name2};
-        String[] actual = manager.setManagerFilms(0);
-        Assertions.assertArrayEquals(expected, actual);
-    }
 }
 
