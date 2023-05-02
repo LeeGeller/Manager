@@ -38,7 +38,7 @@ public class TestOfManager {
         manager.addFilmsManager(name5);
 
         String[] expected = {name5, name4, name3, name2, name1};
-        String[] actual = manager.findLast();
+        String[] actual = manager.getCount();
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -53,7 +53,7 @@ public class TestOfManager {
 
 
         String[] expected = {name5, name4};
-        String[] actual = manager.setManagerFilms(2);
+        String[] actual = manager.setCount(2);
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -66,7 +66,7 @@ public class TestOfManager {
 
 
         String[] expected = {name3, name2, name1};
-        String[] actual = manager.setManagerFilms(5);
+        String[] actual = manager.setCount(5);
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -79,7 +79,7 @@ public class TestOfManager {
         manager.addFilmsManager(name4);
 
         String[] expected = {name4};
-        String[] actual = manager.setManagerFilms(1);
+        String[] actual = manager.setCount(1);
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -90,7 +90,7 @@ public class TestOfManager {
 
 
         String[] expected = {name1};
-        String[] actual = manager.setManagerFilms(3);
+        String[] actual = manager.setCount(3);
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -106,7 +106,7 @@ public class TestOfManager {
 
 
         String[] expected = {name6, name5, name4, name3, name2};
-        String[] actual = manager.findLast();
+        String[] actual = manager.getCount();
         Assertions.assertArrayEquals(expected, actual);
     }
 

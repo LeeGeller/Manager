@@ -8,16 +8,18 @@ public class ManagerFilms {
         this.count = 5;
     }
 
-    public String[] ManagerFilms(int count) {
+    public ManagerFilms(int count) {
         this.count = count;
+    }
+
+    public String[] getCount() {
         return findLast();
     }
 
-    public String[] setManagerFilms(int count) {
+    public String[] setCount(int count) {
         this.count = count;
         return findLast();
     }
-
 
     public void addFilmsManager(String name) {
 
