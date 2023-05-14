@@ -110,5 +110,41 @@ public class TestOfManager {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void ManagerFilmsTestFindLastWithCount(){
+
+        manager.addFilmsManager(name1);
+        manager.addFilmsManager(name2);
+        manager.addFilmsManager(name3);
+        manager.addFilmsManager(name4);
+        manager.addFilmsManager(name5);
+        manager.addFilmsManager(name6);
+
+        manager.setCount(3);
+
+        String[] expected = {name6, name5, name4};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void ManagerFilmsTestFindLastGeneral(){
+
+        ManagerFilms managerFilms = new ManagerFilms();
+
+        manager.addFilmsManager(name1);
+        manager.addFilmsManager(name2);
+        manager.addFilmsManager(name3);
+        manager.addFilmsManager(name4);
+        manager.addFilmsManager(name5);
+        manager.addFilmsManager(name6);
+
+        String[] expected = {name6, name5, name4, name3, name2};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
 
