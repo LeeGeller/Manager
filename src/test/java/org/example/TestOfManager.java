@@ -133,7 +133,6 @@ public class TestOfManager {
 
         ManagerFilms managerFilms = new ManagerFilms();
 
-        manager.addFilmsManager(name1);
         manager.addFilmsManager(name2);
         manager.addFilmsManager(name3);
         manager.addFilmsManager(name4);
@@ -145,6 +144,40 @@ public class TestOfManager {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void ManagerFilmsTestFindLastLess(){
+
+        ManagerFilms managerFilms = new ManagerFilms();
+
+        manager.addFilmsManager(name1);
+        manager.addFilmsManager(name2);
+        manager.addFilmsManager(name3);
+
+        String[] expected = {name3, name2, name1};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void ManagerFilmsTestFindLastMore(){
+
+        ManagerFilms managerFilms = new ManagerFilms();
+
+        manager.addFilmsManager(name1);
+        manager.addFilmsManager(name2);
+        manager.addFilmsManager(name3);
+        manager.addFilmsManager(name4);
+        manager.addFilmsManager(name5);
+        manager.addFilmsManager(name6);
+        manager.addFilmsManager(name7);
+
+        String[] expected = {name7, name6, name5, name4, name3};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 
 }
 
